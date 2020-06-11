@@ -1,24 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Lotto from './Lotto';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Lotto />
+      <Lotto title="Euromillones" totalBalls={5} totalStars={2}/>
     </div>
   );
 }
