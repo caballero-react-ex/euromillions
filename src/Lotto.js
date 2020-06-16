@@ -3,6 +3,8 @@ import './Lotto.css';
 import Ball from './Ball';
 import Star from './Star';
 
+let twoDigitNum = (number) => (number <= 10 ? `0${number}`.slice(-2) : number);
+
 class Lotto extends Component {
   static defaultProps = {
     title: 'Lotto',
@@ -35,19 +37,19 @@ class Lotto extends Component {
   }
 
   render() {
-    return(
-      <div className="Lotto">
+    return (
+      <div className='Lotto'>
         <h1>{this.props.title}</h1>
         <div>
-          {this.state.nums.map(n => <Ball num={n} />)}
-          {this.state.numsStar.map(n => <Star num={n} />)}
+          {this.state.nums.map(n => <Ball num={twoDigitNum(n)} />)}
+          {this.state.numsStar.map(n => <Star num={twoDigitNum(n)} />)}
         </div>
-        <div className="Lotto-btn-container">
-          <button className="Lotto-btn" onClick={this.handleClick}>Generate</button>
-        </div>
+        <button onClick={this.handleClick}>Generate</button>
       </div>
-    )
+    );
   }
 }
+
+
 
 export default Lotto;
