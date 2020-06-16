@@ -22,13 +22,12 @@ class Lotto extends Component {
   }
 
   getRandomNum() {
+    let randomNumsArr = Array.from({length: this.props.totalBalls}, () => Math.floor(Math.random() * 50) +1);
+    let randomNumsStarArr = Array.from({length: this.props.totalStars}, () => Math.floor(Math.random() * 12) +1);
+    
     this.setState(curState => ({
-      nums: curState.nums.map(
-        n => Math.floor(Math.random() * this.props.maxNum) +1
-      ),
-      numsStar: curState.numsStar.map(
-        n => Math.floor(Math.random() * this.props.maxNumStar) +1
-      )
+      nums: randomNumsArr,
+      numsStar: randomNumsStarArr
     }))
   }
 
