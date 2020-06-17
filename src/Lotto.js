@@ -21,18 +21,49 @@ class Lotto extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  getRandomNum() {
-    let randomNumsArr = Array.from({length: this.props.totalBalls}, () => Math.floor(Math.random() * 50) +1);
-    let randomNumsStarArr = Array.from({length: this.props.totalStars}, () => Math.floor(Math.random() * 12) +1);
-    
+  getRandomNum(min, max) {
+      return Math.floor(Math.random() * (max - min)) + min;
+    }
+  
+  getRandomNumArr() {
+    let arrNums = [];
+    let arrNumsStar = [];
+    // Normal Numbers
+    while (arrNums.length < this.props.totalBalls) {
+      let randNum = this.getRandomNum(1,50);
+      if(arrNums.indexOf(randNum) === -1){
+        arrNums.push(randNum);
+      }
+    }
+    // Stars Numbers
+    while (arrNumsStar.length < this.props.totalStars) {
+      let randNumStar = this.getRandomNum(1,12);
+      if(arrNumsStar.indexOf(randNumStar) === -1){
+        arrNumsStar.push(randNumStar);
+      }
+    }
+
     this.setState(curState => ({
-      nums: randomNumsArr,
-      numsStar: randomNumsStarArr
+      nums: arrNums.sort(function(a, b){return a-b}),
+      numsStar: arrNumsStar.sort(function(a, b){return a-b}),
     }))
   }
 
+
+    // let randomNumsArr = Array.from({length: this.props.totalBalls}, () => Math.floor(Math.random() * 50) +1);
+    // let randomNumsStarArr = Array.from({length: this.props.totalStars}, () => Math.floor(Math.random() * 12) +1);
+    
+    // let randomNumsTest = [...Array(4)].map(() => Math.floor(Math.random() * 9));
+    // console.log(randomNumsTest);
+    // console.log(randomNumsArr);
+    // this.setState(curState => ({
+    //   nums: randomNumsArr,
+    //   numsStar: randomNumsStarArr
+    // }))
+
   handleClick() {
-    this.getRandomNum();
+    this.getRandomNumArr();
+    // this.getRandomNum(1,50);
   }
 
   render() {
