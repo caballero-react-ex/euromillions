@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Ball.css';
+import './_Ball.scss';
 
 
 class Ball extends Component {

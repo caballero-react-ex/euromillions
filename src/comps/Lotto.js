@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Lotto.css';
+import './_Lotto.scss';
 import Ball from './Ball';
 import Star from './Star';
 import { v4 as uuidv4 } from 'uuid';

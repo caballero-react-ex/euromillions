@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './_App.scss';
 import Lotto from './Lotto';
 
 function App() {
