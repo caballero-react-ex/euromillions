@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Star.css';
+import './_Star.scss';
 
 class Star extends Component {
   render() {
