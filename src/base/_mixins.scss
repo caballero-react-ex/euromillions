@@ -1,0 +1,21 @@
+// --------------------------------------------------
+// Media queries mixin
+// --------------------------------------------------
+
+@mixin respond($breakpoint) {
+
+  @if $breakpoint == tablet-small {
+    @media only screen and (min-width: 31.2em) { @content }; // 500px
+  }
+
+  @if $breakpoint == tablet {
+    @media only screen and (min-width: 48.1em) { @content }; // 770px
+  }
+
+    @if $breakpoint == desktop {
+    @media only screen and (min-width: 75em) { @content }; // 1200
+  }
+}
+
+// use the mixin inside the class:
+// @include respond($breakpoint-name) { font-weight: 400; }

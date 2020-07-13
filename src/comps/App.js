@@ -1,5 +1,6 @@
 import React from 'react';
-import './_App.scss';
+import '../main.scss';
+
 import Lotto from './Lotto';
 
 function App() {
