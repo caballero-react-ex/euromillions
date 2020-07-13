@@ -1,15 +1,28 @@
 .Lotto {
   width: 100%;
-  // height: 500px;
   margin: 0 auto;
   margin-top: 5rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
   
-  width: 60rem;
-  border: 1px solid $color-light-grey;
-  border-radius: 10px;
-  // background-color: $color-yellow;
+  
+
+
+  @include respond(tablet-small) { 
+    width: 50rem;
+    // border: 1px solid $color-light-grey;
+    // border-radius: 10px;
+  }
+
+  @include respond(tablet) { 
+    width: 60rem;
+    border: 1px solid $color-light-grey;
+    border-radius: 10px;
+  }
+
+  @include respond(desktop) { 
+    width: 65rem;
+  }
 }
 
 .Ball-container {
