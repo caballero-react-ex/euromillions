@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import './_Star.scss';
+import StarIcon from './StarIcon';
+
 
 class Star extends Component {
   render() {
     return (
-    <div className="Star Ball">{this.props.num}</div>
+    
+      <div className="Star Ball">
+        {this.props.num}
+        <span className="Star-icon material-icons">grade</span>
+      </div>
     )
   }
 }

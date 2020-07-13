@@ -1,0 +1,25 @@
+.StarIcon {
+  position: absolute;
+  top: -2px;
+  right: -5px;
+  font-size: 1rem;
+  color: $color-yellow;
+
+  // @include respond(tablet-small) { 
+  //   width: 5rem;
+  //   height: 5rem;
+  //   font-size: 1.8rem;
+  // }
+
+  // @include respond(tablet) { 
+  //   width: 6rem;
+  //   height: 6rem;
+  //   font-size: 2.2rem;
+  // }
+
+  // @include respond(desktop) { 
+  //   width: 6.5rem;
+  //   height: 6.5rem;
+  //   font-size: 2.6rem;
+  // }
+}
