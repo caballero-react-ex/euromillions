@@ -77,11 +77,16 @@
 
   &:hover {
     color: $color-white;
-    background-color: $color-grey;
     background-color: $color-primary;
   }
   &:active {
     transform: scale(0.95);
   }
 
+}
+
+.dis {
+  background-color: $color-grey !important;
+  transition: none;
+  color: $color-white;
 }

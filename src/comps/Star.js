@@ -6,7 +6,7 @@ class Star extends Component {
   render() {
     return (
     
-      <div className="Star Ball">
+      <div className={`Ball Star ${this.props.rolling && "shaking"}`}>
         {this.props.num}
         <span className="Star-icon material-icons">grade</span>
       </div>

@@ -21,7 +21,8 @@ class Lotto extends Component {
     super(props);
     this.state = {nums: Array.from({length: this.props.totalBalls}),
     numsStar: Array.from({length: this.props.totalStars}),
-    id: uuidv4()
+    id: uuidv4(),
+    rolling: false
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -56,6 +57,14 @@ class Lotto extends Component {
 
   handleClick() {
     this.getRandomNumArr();
+
+    //set state with new rolls
+    this.setState({ rolling: true });
+
+    //wait one second, then set rolling to false
+    setTimeout(() => {
+      this.setState({ rolling: false });
+    }, 1000);
   }
 
   render() {
@@ -64,10 +73,24 @@ class Lotto extends Component {
         < Header />
         <span className="Lotto-header-line"></span>
         <div className='Lotto-Ball-container'>
-          {this.state.nums.map(n => <Ball num={twoDigitNum(n)} key={uuidv4()} />)}
-          {this.state.numsStar.map(n => <Star num={twoDigitNum(n)} key={uuidv4()} />)}
+          {this.state.nums.map(n => 
+            < Ball 
+              num={twoDigitNum(n)} 
+              key={uuidv4()} 
+              rolling={this.state.rolling} 
+            />
+          )}
+          {this.state.numsStar.map(n => 
+            < Star 
+              num={twoDigitNum(n)} 
+              key={uuidv4()} 
+              rolling={this.state.rolling} 
+            />
+          )}
         </div>
-        <button className='Lotto-btn' onClick={this.handleClick}>Get Numbers</button>
+        <button className={`Lotto-btn ${this.state.rolling && "dis"}`} onClick={this.handleClick} disabled={this.state.rolling}>
+        {this.state.rolling ? "Getting..." : "Get Numbers"}
+        </button>
       </div>
     );
   }
