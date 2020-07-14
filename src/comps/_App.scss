@@ -1,4 +1,5 @@
 .App {
+  // Grid for the Lotto Component
   @include respond(tablet) { 
     display: grid;
     grid-template-columns: 1fr [content-start-app] 58rem [content-end-app] 1fr ;
