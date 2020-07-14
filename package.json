@@ -1,6 +1,6 @@
 {
-  "homepage": "https://caballero-react-ex.github.io/lotto/",
-  "name": "lotto",
+  "homepage": "https://caballero-react-ex.github.io/euromillions/",
+  "name": "euromillions-generator",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
