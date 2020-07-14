@@ -1,8 +1,5 @@
 .Star {
-  // background-color: gold;
-  // color: black;
   position: relative;
-  
 }
 
 .Star-icon {
@@ -16,12 +13,10 @@
     right: -4px;
     font-size: 1.8rem; 
   }
-
   @include respond(tablet) { 
     right: -3px;
     font-size: 2rem; 
   }
-
   @include respond(desktop) { 
     right: -6px;
     font-size: 2.4rem; 

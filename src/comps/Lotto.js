@@ -7,8 +7,6 @@ import Header from './Header';
 import { v4 as uuidv4 } from 'uuid';
 
 
-let twoDigitNum = (number) => (number <= 10 ? `0${number}`.slice(-2) : number);
-
 class Lotto extends Component {
   static defaultProps = {
     title: 'Lotto',
@@ -19,10 +17,11 @@ class Lotto extends Component {
   }
   constructor(props) {
     super(props);
-    this.state = {nums: Array.from({length: this.props.totalBalls}),
-    numsStar: Array.from({length: this.props.totalStars}),
-    id: uuidv4(),
-    rolling: false
+    this.state = {
+      nums: Array.from({length: this.props.totalBalls}),
+      numsStar: Array.from({length: this.props.totalStars}),
+      id: uuidv4(),
+      rolling: false
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -34,7 +33,7 @@ class Lotto extends Component {
   getRandomNumArr() {
     let arrNums = [];
     let arrNumsStar = [];
-    // Normal Numbers
+    // Ball Numbers
     while (arrNums.length < this.props.totalBalls) {
       let randNum = this.getRandomNum(1,50);
       if(arrNums.indexOf(randNum) === -1){
@@ -48,7 +47,7 @@ class Lotto extends Component {
         arrNumsStar.push(randNumStar);
       }
     }
-
+    // Sort the numbers from lowest to highest
     this.setState(curState => ({
       nums: arrNums.sort(function(a, b){return a-b}),
       numsStar: arrNumsStar.sort(function(a, b){return a-b}),
@@ -68,6 +67,9 @@ class Lotto extends Component {
   }
 
   render() {
+
+    let twoDigitNum = (number) => (number <= 10 ? `0${number}`.slice(-2) : number);
+
     return (
       <div className='Lotto'>
         < Header />

@@ -16,12 +16,9 @@
   @include respond(tablet-small) { 
     font-size: 1.8rem;
   }
-
   @include respond(tablet) { 
     font-size: 2rem;
-    
   }
-
   @include respond(desktop) { 
     font-size: 2.2rem;
   }

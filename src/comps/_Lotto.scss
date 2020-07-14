@@ -1,5 +1,4 @@
 .Lotto {
-  // position: relative;
   display: grid;
   grid-template-columns: 3rem [content-start] 1fr [content-end] 3rem ;
   width: 100%;
@@ -10,19 +9,14 @@
   
   @include respond(tablet-small) { 
     grid-template-columns: 5rem [content-start] 1fr [content-end] 5rem ;
-    // width: 50rem;
   }
-
   @include respond(tablet) { 
+    // grid item from App component
     grid-column: content-start-app / content-end-app;
     grid-template-columns: 3rem [content-start] 1fr [content-end] 3rem;
     margin-top: 8rem;
     border: 1px solid $color-light-grey;
     border-radius: 10px;
-  }
-
-  @include respond(desktop) { 
-    // width: 65rem;
   }
 }
 
@@ -52,8 +46,8 @@
   padding-bottom: 1.2rem;
 
   font-family: 'Barlow', sans-serif;
-  font-size: 1.6rem;
   font-weight: 400;
+  font-size: 1.6rem;
   color: $color-black;
 
   background-color: $color-light-grey;
@@ -78,7 +72,6 @@
   &:active {
     transform: scale(0.95);
   }
-
 }
 
 .btn-disable {

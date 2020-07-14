@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-// import './_Ball.scss';
-
 
 class Ball extends Component {
   render() {
@@ -12,6 +10,3 @@ class Ball extends Component {
 }
 
 export default Ball;
-
-
-
