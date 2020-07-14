@@ -1,33 +1,52 @@
 .Lotto {
+  // position: relative;
+  display: grid;
+  grid-template-columns: 3rem [content-start] 1fr [content-end] 3rem ;
   width: 100%;
   margin: 0 auto;
   margin-top: 5rem;
-  padding-top: 1.5rem;
+  padding-top: 2rem;
   padding-bottom: 4rem;
   
   @include respond(tablet-small) { 
-    width: 50rem;
-    // border: 1px solid $color-light-grey;
-    // border-radius: 10px;
+    grid-template-columns: 5rem [content-start] 1fr [content-end] 5rem ;
+    // width: 50rem;
   }
 
   @include respond(tablet) { 
-    width: 60rem;
+    grid-column: content-start-app / content-end-app;
+    grid-template-columns: 3rem [content-start] 1fr [content-end] 3rem;
+    margin-top: 8rem;
     border: 1px solid $color-light-grey;
     border-radius: 10px;
   }
 
   @include respond(desktop) { 
-    width: 65rem;
+    // width: 65rem;
   }
 }
 
-.Ball-container {
+.Lotto-header-line {
+  @include respond(tablet) { 
+    grid-column: 1 / -1;
+    height: 1px;
+    margin-bottom: 3rem;
+    background-color: $color-light-grey;
+  }
+}
+
+.Lotto-Ball-container {
+  grid-column: content-start / content-end;
   display: flex;
   justify-content: center;
+  justify-content: space-between;
 }
 
 .Lotto-btn {
+  grid-column: content-start / content-end;
+  margin: auto;
+  // display: inline-flex;
+  // justify-content: center;
   margin-top: 4rem;
   padding-top: 1rem;
   padding-bottom: 1rem;

@@ -62,7 +62,8 @@ class Lotto extends Component {
     return (
       <div className='Lotto'>
         < Header />
-        <div className='Ball-container'>
+        <span className="Lotto-header-line"></span>
+        <div className='Lotto-Ball-container'>
           {this.state.nums.map(n => <Ball num={twoDigitNum(n)} key={uuidv4()} />)}
           {this.state.numsStar.map(n => <Star num={twoDigitNum(n)} key={uuidv4()} />)}
         </div>

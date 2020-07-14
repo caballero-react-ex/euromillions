@@ -7,8 +7,8 @@
 
   width: 3.5rem;
   height: 3.5rem;
-  margin-left: .6rem;
-  margin-right: .6rem;
+  // margin-left: .6rem;
+  // margin-right: .6rem;
 
   font-family: 'Oswald', sans-serif;
   font-size: 1.6rem;
@@ -19,7 +19,7 @@
   background-color: $color-white;
   border: 1px solid $color-light-grey;
   border-radius: 50%;
-  box-shadow: 1px 1px 5px -1px rgba($color-light-grey, .8);
+  box-shadow: 1px 1px 5px -1px rgba($color-light-grey, 1);
 
   @include respond(tablet-small) { 
     width: 5rem;

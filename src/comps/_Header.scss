@@ -1,11 +1,12 @@
 .Header {
+  grid-column: content-start / content-end;
   display: flex;
   width: 100%;
-  margin-bottom: 2.5rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
 
   @include respond(tablet) { 
-    border-bottom: 1px solid $color-light-grey;
+    margin-bottom: 0rem;
   }
 }
 
