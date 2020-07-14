@@ -88,7 +88,7 @@ class Lotto extends Component {
             />
           )}
         </div>
-        <button className={`Lotto-btn ${this.state.rolling && "dis"}`} onClick={this.handleClick} disabled={this.state.rolling}>
+        <button className={`Lotto-btn ${this.state.rolling && "btn-disable"}`} onClick={this.handleClick} disabled={this.state.rolling}>
         {this.state.rolling ? "Getting..." : "Get Numbers"}
         </button>
       </div>

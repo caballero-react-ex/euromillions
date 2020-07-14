@@ -45,21 +45,18 @@
 .Lotto-btn {
   grid-column: content-start / content-end;
 
+  width: 14rem;
   margin: auto;
   margin-top: 4rem;
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
 
   font-family: 'Barlow', sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   color: $color-black;
-  // color: $color-white;
 
   background-color: $color-light-grey;
-  // background-color: red;
   border: none;
   border-radius: 5px;
 
@@ -68,10 +65,9 @@
   cursor: pointer;
 
   @include respond(tablet) { 
+    width: 18rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
     font-size: 2rem;
   }
 
@@ -85,7 +81,7 @@
 
 }
 
-.dis {
+.btn-disable {
   background-color: $color-grey !important;
   transition: none;
   color: $color-white;
