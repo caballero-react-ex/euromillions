@@ -1,3 +1,10 @@
 .App {
-  text-align: center;
+  @include respond(tablet) { 
+    display: grid;
+    grid-template-columns: 1fr [content-start-app] 58rem [content-end-app] 1fr ;
+  }
+  @include respond(tablet) { 
+    display: grid;
+    grid-template-columns: 1fr [content-start-app] 65rem [content-end-app] 1fr ;
+  }
 }
