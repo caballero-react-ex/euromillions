@@ -67,7 +67,7 @@ class Lotto extends Component {
           {this.state.nums.map(n => <Ball num={twoDigitNum(n)} key={uuidv4()} />)}
           {this.state.numsStar.map(n => <Star num={twoDigitNum(n)} key={uuidv4()} />)}
         </div>
-        <button className='Lotto-btn' onClick={this.handleClick}>Generate</button>
+        <button className='Lotto-btn' onClick={this.handleClick}>Get Numbers</button>
       </div>
     );
   }
