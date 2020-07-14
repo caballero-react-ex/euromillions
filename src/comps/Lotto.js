@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Ball from './Ball';
 import Star from './Star';
+import Header from './Header';
 
 import { v4 as uuidv4 } from 'uuid';
 
@@ -60,7 +61,7 @@ class Lotto extends Component {
   render() {
     return (
       <div className='Lotto'>
-        {/* <h1>{this.props.title}</h1> */}
+        < Header />
         <div className='Ball-container'>
           {this.state.nums.map(n => <Ball num={twoDigitNum(n)} key={uuidv4()} />)}
           {this.state.numsStar.map(n => <Star num={twoDigitNum(n)} key={uuidv4()} />)}
