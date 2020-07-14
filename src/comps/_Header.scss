@@ -1,0 +1,32 @@
+.Header {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+
+  @include respond(tablet) { 
+    border-bottom: 1px solid $color-light-grey;
+  }
+}
+
+.Header-title {
+  font-size: 1.6rem;
+
+  @include respond(tablet-small) { 
+    font-size: 1.8rem;
+  }
+
+  @include respond(tablet) { 
+    font-size: 2rem;
+    
+  }
+
+  @include respond(desktop) { 
+    font-size: 2.2rem;
+  }
+}
+
+.Header-text {
+  margin-left: 1%;
+  color: $color-grey;
+}
