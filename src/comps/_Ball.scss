@@ -17,7 +17,7 @@
   background-color: $color-white;
   border: 1px solid $color-light-grey;
   border-radius: 50%;
-  box-shadow: 1px 1px 5px -1px rgba($color-light-grey, 1);
+  box-shadow: 1px 1px 5px -1px rgba($color-light-grey, .6);
 
   @include respond(tablet-small) { 
     width: 5rem;

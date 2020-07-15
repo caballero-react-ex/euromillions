@@ -6,6 +6,7 @@
   margin-top: 5rem;
   padding-top: 2rem;
   padding-bottom: 4rem;
+  background-color: $color-white;
   
   @include respond(tablet-small) { 
     grid-template-columns: 5rem [content-start] 1fr [content-end] 5rem ;
