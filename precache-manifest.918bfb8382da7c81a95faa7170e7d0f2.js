@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d533996cf1d981373588ff04d6dfaa5c",
+    "revision": "772c3f84e21f3362d490754c58c3666b",
     "url": "/euromillions/index.html"
   },
   {
-    "revision": "ea0ed64fbde555076ef8",
-    "url": "/euromillions/static/css/main.bd726ade.chunk.css"
+    "revision": "3e794d3354cf6ab08943",
+    "url": "/euromillions/static/css/main.0d44da0f.chunk.css"
   },
   {
     "revision": "695a614d515e66e2e830",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/euromillions/static/js/2.ca9f5e6b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ea0ed64fbde555076ef8",
-    "url": "/euromillions/static/js/main.68a276f3.chunk.js"
+    "revision": "3e794d3354cf6ab08943",
+    "url": "/euromillions/static/js/main.e35efa83.chunk.js"
   },
   {
     "revision": "aeccf754bbbda8de1aab",
