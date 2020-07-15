@@ -48,9 +48,9 @@
   font-family: 'Barlow', sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
-  color: $color-black;
+  color: $color-white;
 
-  background-color: $color-light-grey;
+  background-color: $color-primary;
   border: none;
   border-radius: 5px;
 
@@ -66,8 +66,7 @@
   }
 
   &:hover {
-    color: $color-white;
-    background-color: $color-primary;
+    background-color: $color-primary-dark;
   }
   &:active {
     transform: scale(0.95);
